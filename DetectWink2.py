@@ -12,8 +12,8 @@ def detectWink(frame, location, ROI, cascade,right=False):
 #     ROI = cv2.equalizeHist(ROI)
     x_r,y_r=ROI.shape
     a = int(x_r*0.2)
-#     eyes = cascade.detectMultiScale(ROI, 1.04, 15, 0|cv2.CASCADE_SCALE_IMAGE, (5, 10))
-    eyes = cascade.detectMultiScale(ROI, 1.04, 20, 0|cv2.CASCADE_SCALE_IMAGE, (5, 10))
+    eyes = cascade.detectMultiScale(ROI, 1.04, 15, 0|cv2.CASCADE_SCALE_IMAGE, (5, 10))
+#     eyes = cascade.detectMultiScale(ROI, 1.04, 20, 0|cv2.CASCADE_SCALE_IMAGE, (5, 10))
 #     eyes = cascade.detectMultiScale(ROI, 1.04, 20, 0|cv2.CASCADE_SCALE_IMAGE, (a, 2*a))
     for e in eyes:
         e[0] += location[0]
